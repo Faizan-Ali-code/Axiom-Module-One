@@ -21,7 +21,7 @@
     background: linear-gradient(to top right, rgba(121,245,246,1) 0%, rgba(110,203,252,1) 100%);
     padding: 20px 20px;
     border-radius: 5px;
-    
+    margin: 10px;
     transition: all 1s;
 
 }
