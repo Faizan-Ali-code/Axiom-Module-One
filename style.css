@@ -1,3 +1,5 @@
+/*
+
 *{
     padding: 0;
 }
@@ -34,8 +36,6 @@
 .project a{
     text-decoration: none;
     font-style: none;
-    /* text-transform: uppercase; */
-    /* font-weight: bolder; */
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -61,4 +61,12 @@
 }
 .project button a:hover{
     color: grey;
+}
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
 }

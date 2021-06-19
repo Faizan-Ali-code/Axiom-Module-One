@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #274472;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+
+}
+
+/* ------------------ css for movie selction option -------------------- */
+
+#select{
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-size: 1.15rem;
+}
+/* ------------------ css for seat area -------------------- */
+.seat{
+    background-color: #5885AF;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.seat:not(.occupied):hover{
+   transform:scale(1.25);
+   cursor: pointer;
+}
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform:scale(1);
+    }
+
+.seat.selected{
+    background-color:#C3E0E5 ;
+}
+.seat.occupied{
+    background-color:#616364 ;
+}
+.row{
+    display: flex;
+}
+.seat:nth-of-type(3){
+    margin-left: 20px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 20px;
+}
+
+/*---------------now the css of showcase of movie---------- */
+.showcase{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding:5px 10px ;
+    border-radius: 5px;
+}
+.showcase li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10px;
+    
+}
+.showcase small{
+    padding: 5px;
+}
+
+/*-------------------CSS for screen-------------------*/
+.legend .screen{
+    height: 90px;
+    background-color: white;
+    margin: 20px 0;
+    box-shadow:0 5px 5px 8px rgba(255, 255, 255, 0.7);
+    transform: rotateX(-45deg);
+}
+.legend{
+    perspective: 1000px;
+}
+
+/* ------------------ css for movie count and total price -------------------- */
+#count{
+    color: skyblue;
+}
+
+#price{
+    color: skyblue;
+}
