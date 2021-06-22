@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* color: white; */
+    background-color: #57c564;
+}
+h1{
+    padding: 20px;
+    color: #2F5233;
+    font-size: 40px;
+    text-shadow: 1px 1px 3px #2F5233;
+}
+.screen{
+    width: 60%;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    cursor: pointer;
+    box-shadow: 3px 0px 10px #2F5233,-3px -3px 10px #2F5233;
+}
+
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #B1D8B7;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius:10px ;
+    padding: 10px;
+    box-shadow: 3px 3px 10px  #2F5233,-3px -3px 10px #2F5233;
+
+}
+.controls .play{
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    color: #2F5233;
+    cursor: pointer;
+}
+.controls .stop{
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    color: #2F5233;
+    cursor: pointer;
+}
+.controls .fa-pause{
+    background-color: transparent;
+    border: none;
+    color: #2F5233;
+    cursor: pointer;
+}
+.controls .playtime{
+    color: #2F5233;
+    padding-left:10px;
+    font-size: bolder;
+    font-weight: 800;
+}
+@media (max-width :800px){
+   .screen, .controls{
+       width: 90%;
+   }
+}

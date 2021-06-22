@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="progress.css">
+    <script src="https://kit.fontawesome.com/1f087afc6d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Custom Video Player</h1>
+    
+    <video src="Videos/Teaser Trailer.mp4" poster="images/poster.jpg" id="video" class="screen"></video>
+    <div class="controls">
+        <!-- button for play -->
+        <button class="play" id="play">
+            <i class="fas fa-play fa-2x"></i>
+        </button>
+        <!-- button for stop -->
+        <button class="stop" id="stop">
+            <i class="fas fa-stop fa-2x"></i>
+        </button>
+        <!-- progress bar -->
+        <input type="range" id="progress-bar" min="0" max="100" step="0.1" value="0" />
+        <!-- Time range -->
+        <span class="playtime" id="playtime">00:00</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
