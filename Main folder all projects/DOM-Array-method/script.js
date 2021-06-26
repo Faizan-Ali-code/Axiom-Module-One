@@ -49,13 +49,13 @@ function addObject(newUser){
 
  //definition of the MoneyDouble function
  function MoneyDouble(){
-     console.log("old data",data);
+    //  console.log("old data",data);
 
      data = data.map(user =>{
         return {...user, balance: user.balance * 2 }
             });
 
-     console.log("new data", data);
+    //  console.log("new data", data);
      //update DOM after double the balance the data array 
      updateUI();       
  }
