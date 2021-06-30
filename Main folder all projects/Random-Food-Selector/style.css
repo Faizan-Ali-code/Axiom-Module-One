@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: teal;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.searchDiv{
+    display: flex;  
+}
+
+.searchDiv input{
+    padding: 10px;
+    font-size: 18px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border: 2px solid white;
+    margin: 0;
+    max-width: 800px;
+    width: 400px;
+}
+.searchDiv input:focus{
+    outline: none;
+}
+
+form{
+    display: flex;
+}
+.searchDiv button{
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+    border: 2px solid white;
+    cursor: pointer;
+    background-color: lightgrey;
+
+}
+.container .random{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.displayMeals{
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     grid-gap: 20px;
+}
+.mealDiv{
+    cursor: pointer;
+    position: relative;
+    height: 180px;
+    width: 180px;
+    text-align: center;
+}
+.mealDiv img{
+   height: 100%;
+   width: 100%;
+   border: 2px solid white;
+   border-radius:5px;
+}
+
+.meal-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+.mealDiv:hover .meal-info{
+    opacity: 1;
+    border-radius: 5px;
+}
+
+#mealDetail{
+    margin: 30px auto;
+    width: 70%;
+    text-align: center;
+}
+.selected-meal img{
+   width: 300px;
+   border: 2px solid white;
+   border-radius:5px ;
+}
+
+.selected-meal-info {
+    margin: 20px;
+    border: 2px dotted white;
+    border-radius: 10px;
+}
+.selected-meal-instructions{
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.selected-meal-instructions ul{
+    list-style: none;
+}
+
+.selected-meal-instructions ul li{
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/*media query for desktop*/
+@media (min-width:1550px) {
+   .mealDiv{
+       cursor: pointer;
+       position: relative;
+       height: 360px;
+       width: 360px;
+       text-align: center;
+   }
+}
+
+/*media query for tablet*/
+/*show 3 columns of meal instead of 4 as width < 700 */
+@media (max-width:800px) {
+    .displayMeals{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+   }
+}
+
+
+/*media query for mobile*/
+/*show 2 columns of meal instead of 4 as width < 600 */
+@media (max-width:600px) {
+    .displayMeals{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 20px;
+   }
+}
+
+
+/*media query for with of the input as width of page goes down*/
+@media (max-width:500px) {
+    input[type='text'] {
+        width:300px;
+    }
+}
