@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player App</title>
+</head>
+<body>
+    <h1>Music Player Application</h1>
+    <div class="container play">
+        <!-- info, name and progress bar of music -->
+        <div class="info">
+        <p id="name" class="name">Roar</p>
+        <div class="progress" id="progress"></div>
+    </div>
+    <!-- audio -->
+     <audio src="audio/roar.mp3"></audio>
+     <!-- image -->
+     <div class="album">
+     <img src="images/roar.jpg" alt="image">
+    </div>
+    <!-- buttons for music play,pause,backward,forward -->
+    <div class="buttons">
+        <button class="nav-btn" id="previous">
+            <i class="fas fa-backward"></i>
+        </button>
+        <button class="nav-btn large"  id="play">
+            <i class="fas fa-play"></i>
+        </button>
+        <button class="nav-btn" id="forward">
+            <i class="fas fa-forward"></i>
+        </button>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

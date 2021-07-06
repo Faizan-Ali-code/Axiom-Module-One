@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #FFF5DE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: rgb(167, 164, 164);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+}
+h1{
+    margin-bottom: 250px;
+    font-size: 40px;
+}
+.album{
+    width: 150px;
+    position: relative;
+
+}
+
+.album img{
+   object-fit: cover;
+   border-radius: 50%;
+   height: 100px;
+   width: 100px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   animation: rotate 3s linear infinite;
+   animation-play-state: paused;
+}
+
+.container.play img{
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.nav-btn{
+    background: none;
+    border: 0;
+    color:#3C5186 ;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    
+}
+
+.large{
+    font-size: 24px;
+}
+
+.info{
+    background-color:#3C5186 ;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    padding: 10px 10px 10px 120px;
+    top: 0px;
+    left: 20px;
+    width: calc(100% - 40px);
+    text-align: right;
+    opacity: 0;
+    z-index: 0;
+    transform: translateY(-200%);
+    transition: trasform 1s ease-in,opacity 1s ease-in;
+}
+
+.container.play .info{
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress{
+    background-color: white;
+    height: 5px;
+    border-radius: 5px;
+    margin: 5px ;
+    width: 100%;
+}
+
+.progress-bar{
+    background-color: skyblue;
+    border-radius: 5px;
+    height: 100%;
+    width: 50%;
+    transition: width 0.1s linear;
+}

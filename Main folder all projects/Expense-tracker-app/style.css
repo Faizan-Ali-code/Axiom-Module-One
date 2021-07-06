@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+   --credit-color:#78DEC7;
+   --debit-color:#F55C47;
+}
+button{
+    cursor: pointer;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #DCDCDC;
+
+
+}
+
+.container{
+    margin: 10px auto;
+    width: 350px;
+}
+
+h1{
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+h3{
+   margin: 20px 0 10px;
+   border-bottom: 2px solid #0A1931;
+   padding: 10px 0;
+   font-size: 22px;
+
+}
+h2{
+    font-size: 33px;
+    margin:10px 0  0;
+}
+
+h4{ 
+   margin: 10px;
+   text-transform: uppercase;
+}
+.debit-credit-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    margin: 20px 0;
+    padding: 10px; 
+    
+}
+
+
+ .debit-credit-container > div{
+   flex: 1;
+   text-align: center;
+   
+}  
+
+.debit-credit-container > div:first-of-type{
+    border-right: 2px solid #0A1931 ;
+}
+
+.money{
+    font-size: 24px;
+}
+.money.credit{
+    color: var(--credit-color);
+}
+.money.debit{
+    color: var(--debit-color);
+}
+
+.list{
+    padding: 0;
+}
+.list li{
+    background-color: white;
+     margin: 10px 0;
+     padding: 20px;
+     font-size: 18px;
+     font-weight: 900;
+     list-style-type: none;
+     display: flex;
+     justify-content: space-between; 
+     width: 100%;
+     position: relative;
+     
+     
+}
+
+.list li:hover .delete-btn{
+    opacity: 1;
+}
+
+.list .credit{
+    border-right: 10px solid var(--credit-color);
+    
+}
+
+.list .debit{
+    border-right: 10px solid var(--debit-color);
+}
+.list button{
+    background-color:red;
+    border: 0;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+.form-control label{
+    display: block;
+    font-size: 20px;
+    
+}
+
+.form-control input{
+    padding: 10px; 
+    border-radius: 5px;
+    border: 2px solid #c2c1c1;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.btn-transaction{
+    width: 100%;
+    padding: 10px;
+    background-color: #125D98;
+    color: white;
+    border: 0;
+    font-size: 18px;
+
+
+}
